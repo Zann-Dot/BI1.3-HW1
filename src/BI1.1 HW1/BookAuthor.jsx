@@ -4,8 +4,6 @@ export default function BookAuthor({ author, API_URL }) {
     `${API_URL}/books/author/${author}`,
   );
 
-  console.log(data);
-
   return data ? (
     <div>
       <h2 className="display-5 mt-4">Books By {author}</h2>

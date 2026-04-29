@@ -1,7 +1,8 @@
 import { useState } from "react";
 import useFetch from "../useFetch";
 
-export default function BookFormSubmit({ API_URL }) {
+export default function BookFormSubmit() {
+  const API_URL = import.meta.env.VITE_API_URL || "https://localhost:3000";
   const { data, loading, error } = useFetch(`${API_URL}/books`);
   const [successMsg, setSuccessMsg] = useState("");
   const addBookDetails = async (bookDetails) => {
