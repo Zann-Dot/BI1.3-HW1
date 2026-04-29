@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 export default function Books({ API_URL }) {
   const { data, loading, error } = useFetch(`${API_URL}/books`);
-  console.log(data);
+  console.log(API_URL);
 
   return (
     <div>

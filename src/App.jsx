@@ -1,7 +1,7 @@
 import Books from "./BI1.1 HW1/Books";
 import BookFormSubmit from "./BI1.2 HW1/BookFormSubmit";
 import { Route, Routes } from "react-router";
-const API_URL = import.meta.env.BACKEND_URL || "https://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL || "https://localhost:3000";
 function App() {
   return (
     <>
