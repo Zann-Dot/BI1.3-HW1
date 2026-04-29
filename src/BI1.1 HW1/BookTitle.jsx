@@ -1,8 +1,6 @@
 import useFetch from "../useFetch";
-export default function BookTitle({ title }) {
-  const { data, loading, error } = useFetch(
-    `http://localhost:3000/books/title/${title}`,
-  );
+export default function BookTitle({ title, API_URL }) {
+  const { data, loading, error } = useFetch(`${API_URL}/books/title/${title}`);
 
   return data ? (
     <div>

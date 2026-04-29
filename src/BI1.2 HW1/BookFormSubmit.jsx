@@ -1,12 +1,12 @@
 import { useState } from "react";
 import useFetch from "../useFetch";
 
-export default function BookFormSubmit() {
-  const { data, loading, error } = useFetch("http://localhost:3000/books");
+export default function BookFormSubmit({ API_URL }) {
+  const { data, loading, error } = useFetch(`${API_URL}/books`);
   const [successMsg, setSuccessMsg] = useState("");
   const addBookDetails = async (bookDetails) => {
     try {
-      const response = await fetch("http://localhost:3000/books", {
+      const response = await fetch(`${API_URL}/books`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookDetails),
@@ -65,7 +65,7 @@ export default function BookFormSubmit() {
 
   const handleDelete = async (bookId) => {
     try {
-      const response = await fetch(`http://localhost:3000/books/${bookId}`, {
+      const response = await fetch(`${API_URL}/books/${bookId}`, {
         method: "DELETE",
       });
 

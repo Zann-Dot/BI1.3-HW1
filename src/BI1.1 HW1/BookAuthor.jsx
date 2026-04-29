@@ -1,7 +1,7 @@
 import useFetch from "../useFetch";
-export default function BookAuthor({ author }) {
+export default function BookAuthor({ author, API_URL }) {
   const { data, loading, error } = useFetch(
-    `http://localhost:3000/books/author/${author}`,
+    `${API_URL}/books/author/${author}`,
   );
 
   console.log(data);
